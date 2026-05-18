@@ -5,12 +5,12 @@
 #include "Libro.h"
 
 //constructores
-Libro::Libro():Material(), autor("Mahmoud"), precioUnidad(0), prestamosHistoricos(0) {
+Libro::Libro():Material(), autor("x"), precioUnidad(0), prestamosHistoricos(0) {
 }
 
 Libro::Libro(const string &titulo, const string &codigoIdentificador, const int &unidadesDisponibles, const string &autor, const double &precioUnidad, const int &prestamosHistoricos)
     : Material(titulo, codigoIdentificador, unidadesDisponibles)
-    , autor(autor), precioUnidad(precioUnidad), prestamosHistoricos(precioUnidad){
+    , autor(autor), precioUnidad(precioUnidad), prestamosHistoricos(prestamosHistoricos){
     if (autor.empty()) {
         throw invalid_argument("Autor vacio");
     }
