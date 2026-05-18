@@ -44,7 +44,7 @@ int main() {
         shared_ptr<Revista> revistaNueva = dynamic_pointer_cast<Revista>(revistaAntigua);
         revistaNueva->nuevaEdicion();
         cout << *revistaNueva << endl;
-
+        
         //6.
         cout << "6."<<endl;
         Estanteria<shared_ptr<Material>> estanteria(revistaNueva, libroNuevo);
